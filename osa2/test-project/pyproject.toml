@@ -1,21 +1,19 @@
-[tool.poetry]
-name = "Ohtutesting app"
+[project]
+name = "ohtutesting-app"
 version = "0.0.1"
 description = "Sovellus joka toimii testisyötteenä ohtun viikon 2 laskareihin"
-authors = ["Matti Luukkainen", "Kalle Ilves"]
+authors = [{ name = "Matti Luukkainen" }, { name = "Kalle Ilves" }]
 license = "MIT"
+requires-python = ">=3.14"
+dependencies = [
+    "flask>=3.1.3",
+    "editdistance>=0.8.1",
+]
 
-[tool.poetry.dependencies]
-python = "^3.10"
-Flask = "^3.0.0"
-editdistance = "^0.6.2"
-
-[tool.poetry.group.dev.dependencies]
-coverage = "^7.3.2"
-robotframework = "^6.1.1"
-robotframework-seleniumlibrary = "^6.1.3"
-requests = "^2.31.0"
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+[dependency-groups]
+dev = [
+    "coverage>=7.17.0",
+    "robotframework>=7.5",
+    "robotframework-seleniumlibrary>=6.9.0",
+    "requests>=2.34.2",
+]
