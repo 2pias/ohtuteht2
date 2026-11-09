@@ -2,7 +2,7 @@
 name = "nhl-statistics-1"
 version = "0.1.0"
 description = ""
-requires-python = ">=3.14"
+requires-python = ">=3.11"
 dependencies = []
 
 [dependency-groups]
